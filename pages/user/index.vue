@@ -1,14 +1,13 @@
 <template>
   <div>
     <p>
-      /user/register.vue
+      /users/index.vue
     </p>
   </div>
 </template>
 
 <script>
   export default {
-    name: "register"
   }
 </script>
 
