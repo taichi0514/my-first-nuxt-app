@@ -6,7 +6,7 @@
         <img :src="user.profile_image_url" width="120" alt="">
         <p class="description">{{user.description || 'No description'}}</p>
       </div>
-      <p>
+      <p class="btn_returm">
         <nuxt-link to="/">トップに戻る</nuxt-link>
       </p>
       <h3>{{user.id}}さんの投稿一覧</h3>
@@ -34,18 +34,31 @@
   h3 {
     font-size: 2rem;
     border-bottom: #47494e 3px solid;
+    padding: 0 15px;
   }
 
-  /*.user_description {*/
-    /*display: flex;*/
-  /*}*/
+  .user_description {
+    display: flex;
+    padding: 15px 15px 0;
+  }
 
-  /*.user_description img {*/
+  .user_description img {
     /*margin-top: 20px;*/
-  /*}*/
+    /*margin-top: 20px;*/
+  }
 
-  /*.user_description.description {*/
-    /*margin-top: 20px;*/
-  /*}*/
+  .user_description .description {
+    margin-left: 20px;
+  }
+
+  .btn_returm {
+    text-align: right;
+    padding: 0 15px;
+  }
+
+  li {
+    margin-top: 20px;
+    text-align: left;
+  }
 
 </style>
