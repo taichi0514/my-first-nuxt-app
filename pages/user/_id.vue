@@ -35,13 +35,18 @@
       try {
         await store.dispatch('fetchUserInfo', {id: route.params.id})
       } catch (e) {
+        console.log('fsd')
         redirect('/')
       }
     },
     computed: {
       user() {
         return this.users[this.$route.params.id]
-      }
+      },
+      items() {
+        return this.userItems[this.$route.params.id] || []
+      },
+      ...mapGetters(['users', 'userItems'])
     }
   }
 </script>

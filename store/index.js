@@ -17,7 +17,7 @@ export default () =>
         state.items = items
       },
       setUser(state, {user}) {
-        state.user[user.id] = user
+        state.users[user.id] = user
       },
       setUserItems(state, {user, items}) {
         state.userItems[user.id] = items
@@ -32,9 +32,9 @@ export default () =>
         const [user, items] = await Promise.all([
           this.$axios.$get(`https://qiita.com/api/v2/users/${id}`),
           this.$axios.$get(`https://qiita.com/api/v2/items?query=user:${id}`)
-        ])
-        commit('setUser', {user})
-        commit('setUserItems', {user, items})
+        ]);
+        commit('setUser', {user});
+        commit('setUserItems', {user, items});
       }
     }
   })
