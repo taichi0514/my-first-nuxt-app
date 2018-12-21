@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
+      <h1>mannzi</h1>
       <h3>nuxt.jsのタグが付けられた投稿一覧</h3>
       <ul>
         <li v-for="item in items" :key="item.id">

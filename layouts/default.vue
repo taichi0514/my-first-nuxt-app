@@ -1,6 +1,13 @@
 <template>
   <div>
+    <h2>default layout</h2>
+    <AppNavigation/>
+    <hr>
     <nuxt/>
+    <hr>
+    <fotter>
+      fotter
+    </fotter>
   </div>
 </template>
 
@@ -51,3 +58,13 @@ html {
 }
 </style>
 
+<script>
+  import AppNavigation from "~/components/AppNavigation"
+
+  export default {
+    components: {
+      AppNavigation
+    }
+  }
+
+</script>
