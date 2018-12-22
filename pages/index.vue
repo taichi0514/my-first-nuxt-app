@@ -1,7 +1,18 @@
 <template>
   <section class="container">
+    <div class="login">
+      <h2>login関連</h2>
+      <ul>
+        <li>
+          <nuxt-link to="/login">ログインページ</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/authed-route">認証が必要なページへ</nuxt-link>
+        </li>
+      </ul>
+    </div>
     <div>
-      <h1>mannzi</h1>
+      <h2>mannzi</h2>
       <h3>nuxt.jsのタグが付けられた投稿一覧</h3>
       <ul>
         <li v-for="item in items" :key="item.id">
@@ -42,6 +53,7 @@
     justify-content: start;
     align-items: center;
     text-align: center;
+    flex-direction: column;
   }
 
   .title {

@@ -22,6 +22,11 @@ module.exports = {
     '@nuxtjs/axios'
   ],
   axios: {},
+  router: {
+    middleware: [
+      'auth'
+    ]
+  },
   plgind: [
     '~/plugins/axios.js'
   ],
